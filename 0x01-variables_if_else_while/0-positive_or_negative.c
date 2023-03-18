@@ -5,11 +5,11 @@
 
 /* betty style doc for function main goes there */
 /*
-* main - Application entry point
-* @int n - Random number
-	Prints if n is positive, negative or 0
-* Return - 0 (Success)
-*/
+ * main - Entry point
+ * @int n - Random number
+ * Prints if n is positive, negative or 0
+ * Return - 0 (Success)
+ */
 
 int main(void)
 {
