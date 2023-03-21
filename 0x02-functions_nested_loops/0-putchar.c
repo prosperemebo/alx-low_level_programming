@@ -1,12 +1,19 @@
 #include <stdio.h>
+#include "main.h"
 
-/*
-* main - Entry point for program
-* 
-* Returns - 0 on success
-*/
+/**
+ * main - Entry point of program
+ *
+ * Return: Always 0 (success)
+ */
 
-int main() {
-	printf("_putchar\n");
+int main(void)
+{
+	char c[] = "_putchar";
+	int i;
+
+	for (i = 0; i < 8; i++)
+		_putchar(c[i]);
+	putchar('\n');
 	return (0);
 }
