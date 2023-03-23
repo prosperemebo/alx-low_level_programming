@@ -4,9 +4,9 @@
 
 /**
  * _isupper - checks if character is upper
- * @c - character
+ * @c: - character
  *
- * Return - (1) if character is upper and (0) is character is not upper
+ * Return: (1) if character is upper and (0) is character is not upper
  */
 
 int _isupper(char c)
