@@ -5,7 +5,7 @@
 /**
  * _isdigit - checks if value is digit
  * @c: number
- * 
+ *
  * Return: result of addition
  */
 int _isdigit(int c)
