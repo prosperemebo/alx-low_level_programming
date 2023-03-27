@@ -2,6 +2,7 @@
 
 /**
  * reset_to_98 - changing arguement to 98
+ * @n: pointer to int
  *
  * Return: 0 on success
  */
