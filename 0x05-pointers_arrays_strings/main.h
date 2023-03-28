@@ -2,6 +2,7 @@
 #define HEADER_FILE
 
 void reset_to_98(int *n);
+int _atoi(char *s);
 char *_strcpy(char *dest, char *src);
 void swap_int(int *a, int *b);
 int _strlen(char *s);
