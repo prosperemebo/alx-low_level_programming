@@ -3,7 +3,7 @@
 /**
  * _strcat - concatenates two strings
  * @src: Source String
- * #dest: Destnation String
+ * @dest: Destnation String
  *
  * Return: destination String
  */
