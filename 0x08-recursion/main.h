@@ -11,5 +11,8 @@ int square_root(int n, int i);
 int _strlen_recursion(char *s);
 int is_prime_number(int n);
 int prime(int n, int i);
+int is_palindrome(char *s);
+int str_len(char *s);
+int cmp(char *s, int len, int i);
 
 #endif
