@@ -1,4 +1,4 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
  * _putchar - Function
@@ -9,5 +9,5 @@
 
 int _putchar(char c)
 {
-	return (0);
+	return (write(1, &c, 1));
 }
