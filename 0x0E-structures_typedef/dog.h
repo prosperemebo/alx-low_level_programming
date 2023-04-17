@@ -2,20 +2,20 @@
 #define DOG_STRUCT
 
 /**
- * struct Dog - Real Dog Blueprint
+ * struct dog - Real Dog Blueprint
  *
  * @name: Dog's Name
  * @age: Dog's Age
  * @owner: Dog's owner
  */
 
-struct Dog
+struct dog
 {
 	char *name;
-	int age;
+	float age;
 	char *owner;
-}
+};
 
-typedef struct Dog dog;
+typedef struct dog dog;
 
 #endif
