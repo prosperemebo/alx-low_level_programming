@@ -2,7 +2,7 @@
 #define DOG_STRUCT
 
 /**
- * struct dog - Real Dog Blueprint
+ * struct dog - A Real Dog's Blueprint
  *
  * @name: Dog's Name
  * @age: Dog's Age
@@ -17,5 +17,7 @@ struct dog
 };
 
 typedef struct dog dog;
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
