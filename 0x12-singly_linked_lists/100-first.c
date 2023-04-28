@@ -1,15 +1,13 @@
 #include <stdio.h>
 
 /**
- * print_before_main - Prints a message before the main function is executed.
+ * first - competitive function likes to run first
  *
- * Return: (0) on success
+ * Return: Always 0.
  */
-
-int __attribute__((constructor)) first()
+int __attribute__((constructor)) first(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
-
 	return (0);
 }
