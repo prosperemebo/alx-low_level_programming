@@ -2,11 +2,14 @@
 
 /**
  * print_before_main - Prints a message before the main function is executed.
+ *
+ * Return: (0) on success
  */
 
-void __attribute__((constructor))
-print_before_program_start()
+int __attribute__((constructor)) start()
 {
 	printf("You're beat! and yet, you must allow,\n"
 	       "I bore my house upon my back!\n");
+
+	return (0);
 }
