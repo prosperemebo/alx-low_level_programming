@@ -26,9 +26,28 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	new_node->len = strlen(new_node->str);
+	new_node->len = _strlen(new_node->str);
 	new_node->next = *head;
 	*head = new_node;
 
 	return (new_node);
+}
+
+/**
+ * _strlen - Computes the length of a string.
+ *
+ * @str: A pointer to the string to compute the length of.
+ *
+ * Return: The length of the string.
+ */
+int _strlen(const char *str)
+{
+	int len = 0;
+
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+
+	return (len);
 }
