@@ -12,12 +12,12 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int count = 0;
-	unsigned long int diff = n ^ m; // XOR the numbers to get the differing bits
+	unsigned long int diff = n ^ m;
 
 	while (diff != 0)
 	{
-		count += (diff & 1); // Add 1 if the lowest bit is set
-		diff >>= 1;	     // Shift the difference to the right by 1 bit
+		count += (diff & 1);
+		diff >>= 1;
 	}
 
 	return count;
