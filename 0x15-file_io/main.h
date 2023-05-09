@@ -1,5 +1,6 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
+#define BUF_SIZE 1024
 
 #include <fcntl.h>
 #include <unistd.h>
