@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * add_dnodeint - Adds a new node at the beginning of a dlistint_t list.
+ * add_dnodeint - Adds a new node at the
+ * beginning of a dlistint_t list.
  * @head: Double pointer to the head of the list.
  * @n: Value to be assigned to the new node.
  *
