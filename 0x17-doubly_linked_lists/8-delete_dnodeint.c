@@ -1,8 +1,11 @@
 #include "lists.h"
 
 /**
- * free_list - frees a dlistint_t list.
- * @head: head of list
+ * free_list - Frees a dlistint_t list.
+ * @head: Pointer to the head of the list.
+ *
+ * Description: This function frees all
+ * the nodes in a doubly linked list.
  */
 void free_list(dlistint_t *head)
 {
@@ -17,10 +20,12 @@ void free_list(dlistint_t *head)
 }
 
 /**
- * delete_dnodeint_at_index - deletes node at index
- * @head: head
- * @index: index of the list what node should be deleted.
- * Return: -1 or 1
+ * delete_dnodeint_at_index - Deletes a node at
+ * a given index in a dlistint_t list.
+ * @head: Double pointer to the head of the list.
+ * @index: Index of the node to be deleted.
+ *
+ * Return: 1 if successful, or -1 if the index is out of range.
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -30,7 +35,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	if (!(*head) || len < index)
 		return (-1);
+
 	temp = *head;
+
 	if (len == 0 && index == 0)
 	{
 		*head = NULL;
@@ -53,14 +60,17 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		temp->prev->next = temp->next;
 		temp->next->prev = temp->prev;
 	}
+
 	free(temp);
 	return (1);
 }
 
 /**
- * dlistint_len - returns number of elements
- * @h: head
- * Return: int number of nodes
+ * dlistint_len - Returns the number of
+ * elements in a dlistint_t list.
+ * @h: Pointer to the head of the list.
+ *
+ * Return: The number of nodes in the list.
  */
 size_t dlistint_len(const dlistint_t *h)
 {
