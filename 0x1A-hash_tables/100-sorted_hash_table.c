@@ -13,7 +13,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	if (!new_table)
 		return (NULL);
 	new_table->size = size;
-	new_table->slength = 0;
+	new_table->length = 0;
 	new_table->array = malloc(sizeof(shash_node_t *) * size);
 	if (!new_table->array)
 		return (NULL);
@@ -66,7 +66,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 	set_sorted_list(ht, new_node);
-	ht->slength++;
+	ht->length++;
 	return (1);
 }
 
@@ -80,7 +80,7 @@ void set_sorted_list(shash_table_t *ht, shash_node_t *node)
 	int i, idx;
 	shash_node_t *temp;
 
-	if (!ht->slength)
+	if (!ht->length)
 	{
 		ht->shead = node;
 		node->sprev = NULL;
@@ -89,7 +89,7 @@ void set_sorted_list(shash_table_t *ht, shash_node_t *node)
 		return;
 	}
 	idx = 0;
-	for (i = 0, temp = ht->shead; i < (int)ht->slength; i++, temp = temp->snext)
+	for (i = 0, temp = ht->shead; i < (int)ht->length; i++, temp = temp->snext)
 	{
 		if (strcmp(node->key, temp->key) <= 0)
 			break;
@@ -102,7 +102,7 @@ void set_sorted_list(shash_table_t *ht, shash_node_t *node)
 		ht->shead->sprev = node;
 		ht->shead = node;
 	}
-	else if (idx == (int)ht->slength)
+	else if (idx == (int)ht->length)
 	{
 		node->sprev = ht->stail;
 		node->snext = ht->stail->snext;
@@ -153,10 +153,10 @@ void shash_table_print(const shash_table_t *ht)
 	int i;
 
 	printf("{");
-	for (i = 0, head = ht->shead; i < (int)ht->slength; i++, head = head->snext)
+	for (i = 0, head = ht->shead; i < (int)ht->length; i++, head = head->snext)
 	{
 		printf("'%s': '%s'", head->key, head->value);
-		if (i != (int)ht->slength - 1)
+		if (i != (int)ht->length - 1)
 			printf(", ");
 	}
 	printf("}\n");
@@ -172,7 +172,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 	int i;
 
 	printf("{");
-	for (i = (int)ht->slength - 1, tail = ht->stail; i >= 0; tail = tail->sprev)
+	for (i = (int)ht->length - 1, tail = ht->stail; i >= 0; tail = tail->sprev)
 	{
 		printf("'%s': '%s'", tail->key, tail->value);
 		if (i > 0)
