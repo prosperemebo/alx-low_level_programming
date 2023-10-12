@@ -2,6 +2,7 @@
 #define HEADER_FILE
 
 #include <stdio.h>
+#include <math.h>
 
 /**
  * struct listint_s - singly linked list
@@ -44,5 +45,6 @@ skiplist_t *linear_skip(skiplist_t *list, int value);
 int linear_search(int *array, size_t size, int value);
 int binary_search(int *array, size_t size, int value);
 int binary_helper(int *array, int min, int max, int value);
+int jump_search(int *array, size_t size, int value);
 
 #endif
